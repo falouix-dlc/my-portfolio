@@ -98,13 +98,15 @@ export default function Projects() {
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-          {projects.map((project, index) => (
-            <ProjectCard 
-              key={project.title} 
-              {...project} 
-              index={index}
-            />
-          ))}
+          {projects
+            .filter((project): project is typeof projects[number] & { image: string } => !!project.image)
+            .map((project, index) => (
+              <ProjectCard 
+                key={project.title} 
+                {...project} 
+                index={index}
+              />
+            ))}
         </div>
 
         {/* Footer */}
