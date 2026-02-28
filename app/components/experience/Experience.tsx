@@ -121,7 +121,7 @@ export default function Experience() {
           {/* Experience items */}
           <div className="space-y-12">
             {experience.map((item, index) => (
-              <ExperienceItem key={item.id || index} {...item} index={index} />
+              <ExperienceItem key={index} {...item} />
             ))}
           </div>
         </motion.div>
