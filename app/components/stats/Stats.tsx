@@ -43,7 +43,7 @@ export default function Stats() {
       
       {/* Grid pattern overlay */}
       <div 
-        className="absolute inset-0 opacity-[0.03] dark:opacity-[0.03] opacity-[0.02]"
+        
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px)`,
         }}
