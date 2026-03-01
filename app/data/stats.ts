@@ -1,18 +1,36 @@
+// app/data/stats.ts
+import { Code2, Briefcase, Users, Award } from "lucide-react";
+
 export const stats = [
   {
-    label: "Years Experience",
     value: "5+",
+    label: "Years Experience",
+    description: "Building production apps",
+    icon: Briefcase,
+    suffix: "+"
   },
   {
-    label: "Web & Mobile Projects",
-    value: "20+",
+    value: "50+",
+    label: "Projects Completed",
+    description: "Across various industries",
+    icon: Code2,
+    suffix: "+"
   },
   {
-    label: "Technologies Used",
-    value: "15+",
+    value: "30+",
+    label: "Happy Clients",
+    description: "Worldwide collaborations",
+    icon: Users,
+    suffix: "+"
   },
   {
-    label: "Full-Stack Systems Built",
-    value: "10+",
+    value: "100%",
+    label: "Commitment",
+    description: "To quality delivery",
+    icon: Award,
+    suffix: "%"
   },
 ];
+
+// ✅ Must be named export (matches import in Stats.tsx)
+export type Stat = typeof stats[0];
