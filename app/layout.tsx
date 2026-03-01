@@ -4,7 +4,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { ThemeProvider } from './components/ThemeProvider'
-
+import { Analytics } from "@vercel/analytics/next"
 // Modern font combination: Inter for UI, JetBrains Mono for code/accents
 const inter = Inter({
   subsets: ['latin'],
@@ -110,6 +110,8 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
+
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
