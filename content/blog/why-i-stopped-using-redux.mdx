@@ -1,0 +1,57 @@
+---
+title: "Why I Stopped Using Redux (And What I Use Instead)"
+date: "2026-03-01"
+excerpt: "After 5 years of Redux, I finally moved on. Here's what convinced me to switch and how my development workflow improved."
+tags: ["React", "State Management", "Zustand", "Redux", "Frontend"]
+---
+
+I remember the first time I opened a Redux project. It was 2019, and I spent three hours just trying to understand why I needed actions, reducers, and a store just to toggle a boolean. The boilerplate was overwhelming, but everyone said it was the "industry standard," so I learned it.
+
+Five years later, I removed Redux from my last project. Here's why.
+
+## The Breaking Point
+
+Last year, I was building a dashboard with real-time data updates. The requirements seemed simple:
+
+- Fetch user data
+- Update a chart when filters change
+- Sync state across three components
+
+My Redux implementation required:
+
+- 3 action files
+- 2 reducer files  
+- 4 selector functions
+- A middleware for the async logic
+- 200+ lines of code
+
+And debugging? A nightmare of console logs and Redux DevTools stack traces.
+
+## What I Switched To
+
+I tried [Zustand](https://github.com/pmndrs/zustand) on a whim. The same dashboard feature took 40 lines.
+
+```typescript
+// store.ts
+import { create } from 'zustand'
+
+interface DashboardState {
+  filters: Filter[]
+  data: DataPoint[]
+  setFilters: (filters: Filter[]) => void
+  fetchData: () => Promise<void>
+}
+
+export const useDashboardStore = create<DashboardState>((set, get) => ({
+  filters: [],
+  data: [],
+  setFilters: (filters) => {
+    set({ filters })
+    get().fetchData()
+  },
+  fetchData: async () => {
+    const { filters } = get()
+    const data = await api.fetch({ filters })
+    set({ data })
+  },
+}))
