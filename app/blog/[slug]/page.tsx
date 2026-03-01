@@ -3,7 +3,8 @@ import { getAllPosts, getPostBySlug } from '../utils';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { mdxComponents } from '../components/MDXComponents';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Share2, Facebook, Link2, Twitter } from 'lucide-react';
+import ShareButtons from '../components/ShareButtons';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -32,6 +33,10 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) {
     notFound();
   }
+
+  // Construct the full URL for sharing
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://falouix.com';
+  const postUrl = `${siteUrl}/blog/${post.slug}`;
 
   return (
     <article className="py-24 px-6 bg-[#020617] min-h-screen">
@@ -67,7 +72,7 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="text-xl text-slate-400">{post.excerpt}</p>
           
           <div className="flex flex-wrap gap-2 mt-6">
-            {post.tags.map((tag: string) => (
+            {post.tags.map((tag) => (
               <span
                 key={tag}
                 className="px-3 py-1 bg-blue-500/10 text-blue-400 text-sm rounded-full"
@@ -78,8 +83,26 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </header>
 
+        {/* Share Buttons */}
+        <ShareButtons 
+          url={postUrl} 
+          title={post.title} 
+          excerpt={post.excerpt} 
+        />
+
+        {/* Content */}
         <div className="prose prose-invert prose-blue max-w-none">
           <MDXRemote source={post.content} components={mdxComponents} />
+        </div>
+
+        {/* Bottom Share Section */}
+        <div className="mt-12 pt-8 border-t border-slate-800">
+          <p className="text-slate-400 mb-4">Enjoyed this post? Share it with others:</p>
+          <ShareButtons 
+            url={postUrl} 
+            title={post.title} 
+            excerpt={post.excerpt} 
+          />
         </div>
       </div>
     </article>
