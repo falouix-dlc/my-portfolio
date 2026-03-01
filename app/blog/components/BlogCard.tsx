@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Calendar, Clock, Tag, ArrowUpRight } from 'lucide-react';
-import type { BlogPost } from './types';
+import type { BlogPost } from '../types';
 
 interface BlogCardProps {
   post: BlogPost;
