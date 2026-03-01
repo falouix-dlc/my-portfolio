@@ -8,7 +8,7 @@ export default function Footer() {
         <p className="text-sm">&copy; {year} Fakhreddine. All rights reserved.</p>
 
         <div className="flex space-x-4 mt-2 md:mt-0">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+          <a href="https://github.com/falouix-dlc" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
             GitHub
           </a>
           <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">

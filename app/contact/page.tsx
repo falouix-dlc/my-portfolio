@@ -136,9 +136,9 @@ export default function ContactPage() {
           >
             <div className="space-y-6">
               {[
-                { icon: Mail, label: "Email", value: "contact@falouix.dev", href: "mailto:contact@falouix.dev" },
-                { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-                { icon: MapPin, label: "Location", value: "San Francisco, CA", href: "#" },
+                { icon: Mail, label: "Email", value: "falouix@falouix.com", href: "mailto:falouix@falouix.com" },
+                { icon: Phone, label: "Phone", value: "+39 351 408  8200", href: "tel:+393514088200" },
+                { icon: MapPin, label: "Location", value: "Italy", href: "#" },
               ].map((item, index) => (
                 <motion.a
                   key={item.label}
