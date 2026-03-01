@@ -36,11 +36,11 @@ export default function StatCard({ label, value, suffix = "", prefix = "" }: Sta
     mass: 1,
   });
 
-  const displayValue = useTransform(springValue, (latest) => {
-    if (value.includes("%")) return Math.round(latest);
+  const displayValue = useTransform(springValue, (latest): string => {
+    if (value.includes("%")) return Math.round(latest).toString();
     if (value.includes("M")) return (latest / 1000000).toFixed(hasDecimal ? 1 : 0);
     if (value.includes("k")) return (latest / 1000).toFixed(hasDecimal ? 1 : 0);
-    return Math.round(latest);
+    return Math.round(latest).toString();
   });
 
   useEffect(() => {
