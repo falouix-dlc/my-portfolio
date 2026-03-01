@@ -100,6 +100,8 @@ export default function RootLayout({
             `,
           }}
         />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2721559613359816"
+     crossOrigin="anonymous"></script>
       </head>
       <body 
         className="font-sans antialiased bg-white dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300"
