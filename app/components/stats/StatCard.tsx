@@ -1,7 +1,7 @@
 // components/StatCard.tsx
 "use client";
 
-import { motion, useSpring, useTransform } from "framer-motion";
+import { motion, useSpring, useTransform, easeInOut } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { LucideIcon } from "lucide-react";
 
@@ -62,7 +62,7 @@ export default function StatCard({
       scale: 1,
       transition: { 
         duration: 0.5, 
-        ease: [0.25, 0.46, 0.45, 0.94] 
+        ease: easeInOut
       }
     },
   };
