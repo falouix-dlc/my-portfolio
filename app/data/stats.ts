@@ -1,7 +1,7 @@
 export const stats = [
   {
     label: "Years Experience",
-    value: "4+",
+    value: "5+",
   },
   {
     label: "Web & Mobile Projects",

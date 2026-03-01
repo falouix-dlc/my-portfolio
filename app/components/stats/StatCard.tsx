@@ -117,7 +117,7 @@ export default function StatCard({ label, value, suffix = "", prefix = "" }: Sta
             </span>
           )}
           <motion.span className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-white via-slate-200 to-slate-400 bg-clip-text text-transparent tracking-tight">
-            {displayValue}
+            {value}
           </motion.span>
           <span className="text-2xl md:text-3xl font-medium text-blue-400/80">
             {value.includes("k") ? "k" : value.includes("M") ? "M" : value.includes("%") ? "%" : ""}
