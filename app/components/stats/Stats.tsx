@@ -36,6 +36,8 @@ export default function Stats() {
   return (
     <section
       ref={sectionRef}
+      
+      id="stats"
       className="relative py-32 px-6 bg-white dark:bg-[#020617] overflow-hidden"
     >
       {/* Background elements - theme aware */}

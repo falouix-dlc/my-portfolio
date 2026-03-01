@@ -115,6 +115,7 @@ export default function ContactPage() {
   return (
     <section
       ref={sectionRef}
+      id='contact'
       className="relative min-h-screen py-32 px-6 bg-[#020617] overflow-hidden"
     >
       {/* Background effects remain the same... */}

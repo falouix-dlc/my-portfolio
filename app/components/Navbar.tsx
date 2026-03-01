@@ -27,26 +27,27 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: "#projects", label: "Projects" },
-    { href: "#stack", label: "Stack" },
+    { href: "#stats", label: "stats" },
     { href: "#experience", label: "Experience" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "py-3 bg-secondary/80 backdrop-blur-md border-b border-black/5 dark:border-white/5"
+          ? "py-3 bg-[#020617]/90 backdrop-blur-md border-b border-white/10"
           : "py-6 bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-2 font-bold text-xl text-primary">
-          <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+        <div className="flex items-center gap-2 font-bold text-xl text-white">
+          <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
             <Terminal className="w-5 h-5 text-white" />
           </div>
-          <span>FAKHREDDINE<span className="text-accent">.</span></span>
+          <span>FAKHREDDINE<span className="text-blue-400">.</span></span>
         </div>
 
         {/* Desktop Navigation */}
@@ -55,17 +56,17 @@ export default function Navbar() {
             <a 
               key={link.href}
               href={link.href}
-              className="text-sm text-secondary hover:text-accent transition-colors relative group"
+              className="text-sm text-slate-400 hover:text-white transition-colors relative group"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300" />
             </a>
           ))}
           
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-secondary hover:text-accent transition-colors"
+            className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -74,7 +75,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <a
             href="mailto:falouix@gmail.com"
-            className="px-5 py-2.5 bg-accent hover:bg-accent/90 text-white text-sm font-medium rounded-full transition-all hover:scale-105 active:scale-95"
+            className="px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-full transition-all hover:scale-105 active:scale-95"
           >
             Hire Me
           </a>
@@ -84,14 +85,14 @@ export default function Navbar() {
         <div className="md:hidden flex items-center gap-4">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg bg-secondary text-secondary"
+            className="p-2 rounded-lg bg-white/5 text-slate-300"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
           
           <button
-            className="text-primary p-2"
+            className="text-white p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -102,7 +103,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div 
-        className={`md:hidden absolute top-full left-0 w-full bg-primary border-b border-black/5 dark:border-white/5 transition-all duration-300 ${
+        className={`md:hidden absolute top-full left-0 w-full bg-[#020617] border-b border-white/10 transition-all duration-300 ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
@@ -112,7 +113,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg text-secondary hover:text-accent transition-colors"
+              className="text-lg text-slate-400 hover:text-white transition-colors"
             >
               {link.label}
             </a>
@@ -120,7 +121,7 @@ export default function Navbar() {
           <a
             href="mailto:falouix@gmail.com"
             onClick={() => setIsMenuOpen(false)}
-            className="mt-4 px-5 py-3 bg-accent text-white text-center font-medium rounded-full"
+            className="mt-4 px-5 py-3 bg-blue-500 text-white text-center font-medium rounded-full"
           >
             Hire Me
           </a>

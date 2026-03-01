@@ -11,10 +11,10 @@ export default function Footer() {
           <a href="https://github.com/falouix-dlc" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
             GitHub
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+          <a href="https://www.linkedin.com/in/fakhr-eddine-aloui-7457991b6/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
             LinkedIn
           </a>
-          <a href="mailto:youremail@example.com" className="hover:text-blue-500">
+          <a href="mailto:falouix@falouix.com" className="hover:text-blue-500">
             Email
           </a>
         </div>
