@@ -88,6 +88,7 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable} scroll-smooth`}
       suppressHydrationWarning
     >
+      <meta name="image" property="og:image" content="/og-image.png"></meta>
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2721559613359816"
      crossOrigin="anonymous"></script>

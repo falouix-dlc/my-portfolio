@@ -1,7 +1,7 @@
 {
   "name": "Fakhreddine Portfolio",
   "short_name": "Fakhreddine",
-  "description": "Full Stack Developer Portfolio",
+  "description": "Professional Full Stack Developer Portfolio of Fakhreddine, specializing in Laravel, React, Node.js, and building scalable digital systems.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#020617",
