@@ -9,9 +9,8 @@ import {
   Phone, 
   Github, 
   Linkedin, 
-  Twitter,
+  Instagram,
   ArrowUpRight,
-  Sparkles,
   Check,
   Copy,
   AlertCircle
@@ -102,8 +101,8 @@ export default function ContactPage() {
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/falouix-dlc", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/yourprofile", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/yourhandle", label: "Twitter" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/fakhr-eddine-aloui-7457991b6/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/f.alouix", label: "Instagram" },
   ];
 
   const contactInfo = [
