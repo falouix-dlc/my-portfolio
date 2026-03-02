@@ -40,7 +40,7 @@ export const metadata = {
     siteName: 'Fakhreddine Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Fakhreddine - Full Stack Developer',
@@ -51,7 +51,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Fakhreddine | Full Stack Developer',
     description: 'Building scalable digital systems with modern technologies.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.png'],
     creator: '@falouix',
   },
   robots: {
@@ -89,17 +89,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Prevent flash of wrong theme */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const theme = localStorage.getItem('theme') || 'dark';
-                document.documentElement.classList.add(theme);
-              })();
-            `,
-          }}
-        />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2721559613359816"
      crossOrigin="anonymous"></script>
       </head>
