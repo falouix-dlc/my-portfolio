@@ -176,7 +176,7 @@ export default function Hero() {
               </Link>
               
               <Link
-                href="/cv.pdf"
+                href="Fakhreddine_CV.pdf"
                 className="group px-8 py-4 border border-slate-200 dark:border-white/10 hover:border-blue-500/50 dark:hover:border-blue-500/50 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-xl font-semibold flex items-center gap-2 transition-all bg-white/50 dark:bg-transparent hover:bg-blue-50 dark:hover:bg-blue-500/10"
               >
                 Download CV
